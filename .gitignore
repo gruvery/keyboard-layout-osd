@@ -1,0 +1,4 @@
+# Generated locally and by gnome-extensions pack.
+schemas/gschemas.compiled
+dist/
+*.shell-extension.zip

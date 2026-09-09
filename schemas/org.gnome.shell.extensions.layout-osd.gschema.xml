@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+
+  <schema id="org.gnome.shell.extensions.layout-osd"
+          path="/org/gnome/shell/extensions/layout-osd/">
+
+    <key name="opacity" type="i">
+      <default>80</default>
+      <range min="20" max="100"/>
+      <summary>OSD opacity</summary>
+    </key>
+
+    <key name="hide-delay" type="d">
+      <default>0.7</default>
+      <range min="0.2" max="3.0"/>
+      <summary>Hide delay in seconds</summary>
+    </key>
+
+    <key name="fade-duration" type="i">
+      <default>250</default>
+      <range min="50" max="1000"/>
+      <summary>Fade out duration in milliseconds</summary>
+    </key>
+
+    <key name="vertical-position" type="i">
+      <default>65</default>
+      <range min="0" max="100"/>
+      <summary>Vertical position</summary>
+    </key>
+
+    <key name="all-monitors" type="b">
+      <default>false</default>
+      <summary>Show on all monitors</summary>
+    </key>
+
+    <key name="display-mode" type="s">
+      <default>'short'</default>
+      <choices>
+        <choice value="short"/>
+        <choice value="localized"/>
+        <choice value="full"/>
+      </choices>
+      <summary>Keyboard layout name display mode</summary>
+    </key>
+
+    <key name="test-popup" type="b">
+      <default>false</default>
+      <summary>Request a test popup</summary>
+    </key>
+
+  </schema>
+
+</schemalist>

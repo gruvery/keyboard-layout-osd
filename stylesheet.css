@@ -1,0 +1,8 @@
+.layout-osd-popup {
+    background-color: rgba(40,40,40,0.80);
+    color: white;
+    border-radius: 18px;
+    padding: 12px 32px;
+    font-size: 34px;
+    font-weight: bold;
+}
