@@ -44,6 +44,10 @@ export default class LayoutOsdExtension extends Extension {
             GLib.source_remove(this._timeout);
             this._timeout = null;
         }
+
+        this._popups = null;
+        this._inputSourceManager = null;
+        this._settings = null;
     }
 
     _destroyPopups() {
