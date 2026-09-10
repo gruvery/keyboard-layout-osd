@@ -65,3 +65,9 @@ extension instance or schema loaded.
 
 Keyboard Layout OSD is licensed under the
 [GNU General Public License v3.0](LICENSE).
+
+## Project
+
+Developed by [Gruvery.Systems](https://github.com/gruvery). Source code and
+issue tracking are available on
+[GitHub](https://github.com/gruvery/keyboard-layout-osd).
