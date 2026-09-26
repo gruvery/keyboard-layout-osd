@@ -26,6 +26,61 @@ layouts or input languages in GNOME Shell.
 
 - GNOME Shell 50
 
+## Install
+
+Install Keyboard Layout OSD from
+[GNOME Shell Extensions](https://extensions.gnome.org/extension/10919/keyboard-layout-osd/).
+
+## NixOS
+
+The repository provides a flake, so the extension can be installed directly
+without waiting for it to reach Nixpkgs.
+
+Add the input to your system flake:
+
+```nix
+inputs.keyboard-layout-osd = {
+  url = "github:gruvery/keyboard-layout-osd";
+  inputs.nixpkgs.follows = "nixpkgs";
+};
+```
+
+You can test the package before adding it to a system configuration:
+
+```bash
+nix build github:gruvery/keyboard-layout-osd
+```
+
+Then add its NixOS module to your system definition:
+
+```nix
+nixosConfigurations.your-host = nixpkgs.lib.nixosSystem {
+  modules = [
+    ./configuration.nix
+    inputs.keyboard-layout-osd.nixosModules.default
+  ];
+};
+```
+
+Rebuild the system and log out and back in so GNOME Shell discovers the new
+system extension. Then enable **Keyboard Layout OSD** in the Extensions
+application. It can also be enabled from a terminal:
+
+```bash
+gnome-extensions enable keyboard-layout-osd@gruvery.systems
+```
+
+Home Manager users can install the package directly:
+
+```nix
+{ inputs, pkgs, ... }:
+{
+  home.packages = [
+    inputs.keyboard-layout-osd.packages.${pkgs.system}.default
+  ];
+}
+```
+
 ## Install from source
 
 Copy or clone the project to:
